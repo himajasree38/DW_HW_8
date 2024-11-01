@@ -1,0 +1,461 @@
+[0m20:52:41.168799 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6c90644c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6b8f10340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6b8f37a60>]}
+
+
+============================== 20:52:41.171727 | edb1ea95-74e0-4ca6-ac2f-4a415a0f4328 ==============================
+[0m20:52:41.171727 [info ] [MainThread]: Running with dbt=1.8.7
+[0m20:52:41.172310 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'cache_selected_only': 'False', 'log_path': '/Users/himajasree/Desktop/sjsu-data226/week10/build_mau/logs', 'no_print': 'None', 'use_experimental_parser': 'False', 'profiles_dir': '/Users/himajasree/.dbt', 'log_format': 'default', 'fail_fast': 'False', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt debug', 'partial_parse': 'True', 'write_json': 'True', 'target_path': 'None', 'static_parser': 'True', 'debug': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'quiet': 'False', 'use_colors': 'True', 'log_cache_events': 'False', 'introspect': 'True', 'indirect_selection': 'eager', 'printer_width': '80'}
+[0m20:52:41.182440 [info ] [MainThread]: dbt version: 1.8.7
+[0m20:52:41.182780 [info ] [MainThread]: python version: 3.8.5
+[0m20:52:41.183032 [info ] [MainThread]: python path: /Users/himajasree/opt/anaconda3/bin/python
+[0m20:52:41.183273 [info ] [MainThread]: os info: macOS-10.16-x86_64-i386-64bit
+[0m20:52:41.644094 [info ] [MainThread]: Using profiles dir at /Users/himajasree/.dbt
+[0m20:52:41.644489 [info ] [MainThread]: Using profiles.yml file at /Users/himajasree/.dbt/profiles.yml
+[0m20:52:41.644732 [info ] [MainThread]: Using dbt_project.yml file at /Users/himajasree/Desktop/sjsu-data226/week10/build_mau/dbt_project.yml
+[0m20:52:41.645157 [info ] [MainThread]: adapter type: snowflake
+[0m20:52:41.645441 [info ] [MainThread]: adapter version: 1.8.4
+[0m20:52:41.709669 [info ] [MainThread]: Configuration:
+[0m20:52:41.710087 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:52:41.710329 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:52:41.710556 [info ] [MainThread]: Required dependencies:
+[0m20:52:41.710864 [debug] [MainThread]: Executing "git --help"
+[0m20:52:41.749832 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:52:41.750730 [debug] [MainThread]: STDERR: "b''"
+[0m20:52:41.751095 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:52:41.751527 [info ] [MainThread]: Connection:
+[0m20:52:41.751940 [info ] [MainThread]:   account: RRWXRUI-RNB26847
+[0m20:52:41.752194 [info ] [MainThread]:   user: himajasree83
+[0m20:52:41.752428 [info ] [MainThread]:   database: dev
+[0m20:52:41.752652 [info ] [MainThread]:   warehouse: compute_wh
+[0m20:52:41.752877 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m20:52:41.753098 [info ] [MainThread]:   schema: raw_data
+[0m20:52:41.753319 [info ] [MainThread]:   authenticator: None
+[0m20:52:41.753534 [info ] [MainThread]:   oauth_client_id: None
+[0m20:52:41.753751 [info ] [MainThread]:   query_tag: None
+[0m20:52:41.753966 [info ] [MainThread]:   client_session_keep_alive: False
+[0m20:52:41.754183 [info ] [MainThread]:   host: None
+[0m20:52:41.754398 [info ] [MainThread]:   port: None
+[0m20:52:41.754614 [info ] [MainThread]:   proxy_host: None
+[0m20:52:41.754829 [info ] [MainThread]:   proxy_port: None
+[0m20:52:41.755148 [info ] [MainThread]:   protocol: None
+[0m20:52:41.755464 [info ] [MainThread]:   connect_retries: 1
+[0m20:52:41.755744 [info ] [MainThread]:   connect_timeout: None
+[0m20:52:41.756946 [info ] [MainThread]:   retry_on_database_errors: False
+[0m20:52:41.757203 [info ] [MainThread]:   retry_all: False
+[0m20:52:41.757452 [info ] [MainThread]:   insecure_mode: False
+[0m20:52:41.757730 [info ] [MainThread]:   reuse_connections: None
+[0m20:52:41.758357 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m20:52:41.769969 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m20:52:41.771515 [debug] [MainThread]: Using snowflake connection "debug"
+[0m20:52:41.771834 [debug] [MainThread]: On debug: select 1 as id
+[0m20:52:41.772117 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:52:42.311602 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.539 seconds
+[0m20:52:42.318604 [debug] [MainThread]: On debug: Close
+[0m20:52:42.468038 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:52:42.469618 [info ] [MainThread]: [32mAll checks passed![0m
+[0m20:52:42.477454 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 1.3626136, "process_user_time": 2.04507, "process_kernel_time": 0.244623, "process_mem_max_rss": "179130368", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:52:42.479151 [debug] [MainThread]: Command `dbt debug` succeeded at 20:52:42.478833 after 1.36 seconds
+[0m20:52:42.480200 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:52:42.481107 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6c90644c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6b96e9e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd6b96e9d00>]}
+[0m20:52:42.482060 [debug] [MainThread]: Flushing usage events
+[0m20:56:15.465377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2b11a43a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2b2b2d460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2b2b55fa0>]}
+
+
+============================== 20:56:15.468650 | d91ef96d-b941-4a96-b69a-c91b4dabeab3 ==============================
+[0m20:56:15.468650 [info ] [MainThread]: Running with dbt=1.8.7
+[0m20:56:15.469251 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'indirect_selection': 'eager', 'introspect': 'True', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/Users/himajasree/Desktop/sjsu-data226/week10/build_mau/logs', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'cache_selected_only': 'False', 'profiles_dir': '/Users/himajasree/.dbt', 'printer_width': '80', 'empty': 'False', 'debug': 'False', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'quiet': 'False', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'target_path': 'None', 'version_check': 'True', 'use_colors': 'True', 'static_parser': 'True'}
+[0m20:56:16.280624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd91ef96d-b941-4a96-b69a-c91b4dabeab3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2b2b2f130>]}
+[0m20:56:16.318446 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd91ef96d-b941-4a96-b69a-c91b4dabeab3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2a07107f0>]}
+[0m20:56:16.319391 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m20:56:16.342208 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m20:56:16.343166 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:56:16.343521 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd91ef96d-b941-4a96-b69a-c91b4dabeab3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2b3c40340>]}
+[0m20:56:17.401946 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m20:56:17.402411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'd91ef96d-b941-4a96-b69a-c91b4dabeab3', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2909336d0>]}
+[0m20:56:17.634561 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd91ef96d-b941-4a96-b69a-c91b4dabeab3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd290917640>]}
+[0m20:56:17.745418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd91ef96d-b941-4a96-b69a-c91b4dabeab3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd290a1aa30>]}
+[0m20:56:17.745915 [info ] [MainThread]: Found 3 models, 1 snapshot, 2 data tests, 2 sources, 454 macros
+[0m20:56:17.746199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd91ef96d-b941-4a96-b69a-c91b4dabeab3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd290a2c3a0>]}
+[0m20:56:17.747814 [info ] [MainThread]: 
+[0m20:56:17.748287 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:56:17.749195 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dev'
+[0m20:56:17.759908 [debug] [ThreadPool]: Using snowflake connection "list_dev"
+[0m20:56:17.760284 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "build_mau", "target_name": "dev", "connection_name": "list_dev"} */
+show terse schemas in database dev
+    limit 10000
+[0m20:56:17.760535 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:56:18.427171 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.664 seconds
+[0m20:56:18.432633 [debug] [ThreadPool]: On list_dev: Close
+[0m20:56:18.564603 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now list_dev_snapshots)
+[0m20:56:18.583659 [debug] [ThreadPool]: Using snowflake connection "list_dev_snapshots"
+[0m20:56:18.584524 [debug] [ThreadPool]: On list_dev_snapshots: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "build_mau", "target_name": "dev", "connection_name": "list_dev_snapshots"} */
+show objects in dev.snapshots limit 10000
+[0m20:56:18.585139 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:56:19.077582 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01b8126c-0004-130a-0000-00021feb2069
+[0m20:56:19.078573 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m20:56:19.079599 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_relations_without_caching
+[0m20:56:19.080237 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m20:56:19.080902 [debug] [ThreadPool]: On list_dev_snapshots: Close
+[0m20:56:19.243862 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev_snapshots, now list_dev_raw_data)
+[0m20:56:19.249361 [debug] [ThreadPool]: Using snowflake connection "list_dev_raw_data"
+[0m20:56:19.250172 [debug] [ThreadPool]: On list_dev_raw_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "build_mau", "target_name": "dev", "connection_name": "list_dev_raw_data"} */
+show objects in dev.raw_data limit 10000
+[0m20:56:19.250897 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:56:19.767471 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.516 seconds
+[0m20:56:19.773977 [debug] [ThreadPool]: On list_dev_raw_data: Close
+[0m20:56:19.933467 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd91ef96d-b941-4a96-b69a-c91b4dabeab3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2b3fb0520>]}
+[0m20:56:19.935425 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:56:19.936224 [info ] [MainThread]: 
+[0m20:56:19.941281 [debug] [Thread-1  ]: Began running node model.build_mau.session_timestamp
+[0m20:56:19.942296 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_dev_raw_data, now model.build_mau.session_timestamp)
+[0m20:56:19.943039 [debug] [Thread-1  ]: Began compiling node model.build_mau.session_timestamp
+[0m20:56:19.959876 [debug] [Thread-1  ]: Writing injected SQL for node "model.build_mau.session_timestamp"
+[0m20:56:19.962136 [debug] [Thread-1  ]: Finished running node model.build_mau.session_timestamp
+[0m20:56:19.962898 [debug] [Thread-1  ]: Began running node model.build_mau.user_session_channel
+[0m20:56:19.963671 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.build_mau.session_timestamp, now model.build_mau.user_session_channel)
+[0m20:56:19.964391 [debug] [Thread-1  ]: Began compiling node model.build_mau.user_session_channel
+[0m20:56:19.969007 [debug] [Thread-1  ]: Writing injected SQL for node "model.build_mau.user_session_channel"
+[0m20:56:19.970285 [debug] [Thread-1  ]: Finished running node model.build_mau.user_session_channel
+[0m20:56:19.971443 [debug] [Thread-1  ]: Began running node model.build_mau.session_summary
+[0m20:56:19.972550 [info ] [Thread-1  ]: 1 of 1 START sql table model raw_data.session_summary .......................... [RUN]
+[0m20:56:19.973502 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.build_mau.user_session_channel, now model.build_mau.session_summary)
+[0m20:56:19.974128 [debug] [Thread-1  ]: Began compiling node model.build_mau.session_summary
+[0m20:56:19.986907 [debug] [Thread-1  ]: Writing injected SQL for node "model.build_mau.session_summary"
+[0m20:56:19.987921 [debug] [Thread-1  ]: Began executing node model.build_mau.session_summary
+[0m20:56:20.017723 [debug] [Thread-1  ]: Writing runtime sql for node "model.build_mau.session_summary"
+[0m20:56:20.020578 [debug] [Thread-1  ]: Using snowflake connection "model.build_mau.session_summary"
+[0m20:56:20.021007 [debug] [Thread-1  ]: On model.build_mau.session_summary: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "build_mau", "target_name": "dev", "node_id": "model.build_mau.session_summary"} */
+create or replace transient table dev.raw_data.session_summary
+         as
+        (with  __dbt__cte__session_timestamp as (
+with session_time as (
+    select
+        session_id,
+        user_id,
+        start_time,
+        end_time
+    from dev.raw_data.user_session_channel 
+)
+
+select * from session_time
+),  __dbt__cte__user_session_channel as (
+with user_channel_data as (
+    select
+        user_id,
+        channel,
+        session_id
+    from dev.raw_data.session_timestamp 
+)
+
+select * from user_channel_data
+), session_duration as (
+    select
+        s.session_id,
+        s.user_id,
+        s.start_time,
+        s.end_time,
+        timestampdiff(second, s.start_time, s.end_time) as duration_seconds
+    from __dbt__cte__session_timestamp as s
+),
+
+user_channel as (
+    select
+        uc.session_id,
+        uc.user_id,
+        uc.channel
+    from __dbt__cte__user_session_channel as uc
+)
+
+select
+    sd.session_id,
+    sd.user_id,
+    uc.channel,
+    sd.start_time,
+    sd.end_time,
+    sd.duration_seconds
+from session_duration sd
+join user_channel uc on sd.session_id = uc.session_id
+        );
+[0m20:56:20.021384 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:56:21.728881 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.707 seconds
+[0m20:56:21.776671 [debug] [Thread-1  ]: On model.build_mau.session_summary: Close
+[0m20:56:21.923110 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd91ef96d-b941-4a96-b69a-c91b4dabeab3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2b3ef52e0>]}
+[0m20:56:21.924609 [info ] [Thread-1  ]: 1 of 1 OK created sql table model raw_data.session_summary ..................... [[32mSUCCESS 1[0m in 1.95s]
+[0m20:56:21.926055 [debug] [Thread-1  ]: Finished running node model.build_mau.session_summary
+[0m20:56:21.931026 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:56:21.931746 [debug] [MainThread]: Connection 'model.build_mau.session_summary' was properly closed.
+[0m20:56:21.932437 [info ] [MainThread]: 
+[0m20:56:21.933218 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 4.18 seconds (4.18s).
+[0m20:56:21.934635 [debug] [MainThread]: Command end result
+[0m20:56:21.980038 [info ] [MainThread]: 
+[0m20:56:21.980774 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:56:21.981154 [info ] [MainThread]: 
+[0m20:56:21.981550 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m20:56:21.984882 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 6.5807104, "process_user_time": 3.975126, "process_kernel_time": 0.689697, "process_mem_max_rss": "189595648", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:56:21.985625 [debug] [MainThread]: Command `dbt run` succeeded at 20:56:21.985484 after 6.58 seconds
+[0m20:56:21.986152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2b11a43a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd2b247f7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd290ae4e50>]}
+[0m20:56:21.986576 [debug] [MainThread]: Flushing usage events
+[0m20:57:17.981691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae6044c520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae727d5130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae726cedf0>]}
+
+
+============================== 20:57:17.985319 | c5f9c0e5-a6b6-45b5-8ca0-d3caada1fbd5 ==============================
+[0m20:57:17.985319 [info ] [MainThread]: Running with dbt=1.8.7
+[0m20:57:17.986095 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'quiet': 'False', 'debug': 'False', 'log_cache_events': 'False', 'static_parser': 'True', 'indirect_selection': 'eager', 'fail_fast': 'False', 'log_path': '/Users/himajasree/Desktop/sjsu-data226/week10/build_mau/logs', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'partial_parse': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'invocation_command': 'dbt snapshot', 'printer_width': '80', 'target_path': 'None', 'write_json': 'True', 'empty': 'None', 'log_format': 'default', 'profiles_dir': '/Users/himajasree/.dbt', 'introspect': 'True', 'cache_selected_only': 'False'}
+[0m20:57:18.659897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c5f9c0e5-a6b6-45b5-8ca0-d3caada1fbd5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae71696d60>]}
+[0m20:57:18.697841 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c5f9c0e5-a6b6-45b5-8ca0-d3caada1fbd5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae727ed880>]}
+[0m20:57:18.698787 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m20:57:18.722026 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m20:57:18.868583 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:57:18.869038 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:57:18.919587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c5f9c0e5-a6b6-45b5-8ca0-d3caada1fbd5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae510cd760>]}
+[0m20:57:19.028277 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c5f9c0e5-a6b6-45b5-8ca0-d3caada1fbd5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae73a34dc0>]}
+[0m20:57:19.028767 [info ] [MainThread]: Found 3 models, 1 snapshot, 2 data tests, 2 sources, 454 macros
+[0m20:57:19.029060 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c5f9c0e5-a6b6-45b5-8ca0-d3caada1fbd5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae73aa10a0>]}
+[0m20:57:19.030049 [info ] [MainThread]: 
+[0m20:57:19.030612 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:57:19.031531 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dev'
+[0m20:57:19.043770 [debug] [ThreadPool]: Using snowflake connection "list_dev"
+[0m20:57:19.044138 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "build_mau", "target_name": "dev", "connection_name": "list_dev"} */
+show terse schemas in database dev
+    limit 10000
+[0m20:57:19.044409 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:57:19.695160 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.650 seconds
+[0m20:57:19.701430 [debug] [ThreadPool]: On list_dev: Close
+[0m20:57:19.847316 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_snapshots)
+[0m20:57:19.849121 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "snapshots"
+"
+[0m20:57:19.859940 [debug] [ThreadPool]: Using snowflake connection "create_dev_snapshots"
+[0m20:57:19.860802 [debug] [ThreadPool]: On create_dev_snapshots: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "build_mau", "target_name": "dev", "connection_name": "create_dev_snapshots"} */
+create schema if not exists dev.snapshots
+[0m20:57:19.861395 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:57:20.336149 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.474 seconds
+[0m20:57:20.341743 [debug] [ThreadPool]: On create_dev_snapshots: Close
+[0m20:57:20.488528 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_dev_snapshots, now list_dev_snapshots)
+[0m20:57:20.506821 [debug] [ThreadPool]: Using snowflake connection "list_dev_snapshots"
+[0m20:57:20.507652 [debug] [ThreadPool]: On list_dev_snapshots: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "build_mau", "target_name": "dev", "connection_name": "list_dev_snapshots"} */
+show objects in dev.snapshots limit 10000
+[0m20:57:20.508265 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:57:20.946658 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.438 seconds
+[0m20:57:20.951192 [debug] [ThreadPool]: On list_dev_snapshots: Close
+[0m20:57:21.088784 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev_snapshots, now list_dev_raw_data)
+[0m20:57:21.096819 [debug] [ThreadPool]: Using snowflake connection "list_dev_raw_data"
+[0m20:57:21.097969 [debug] [ThreadPool]: On list_dev_raw_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "build_mau", "target_name": "dev", "connection_name": "list_dev_raw_data"} */
+show objects in dev.raw_data limit 10000
+[0m20:57:21.098665 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:57:21.641893 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.543 seconds
+[0m20:57:21.646633 [debug] [ThreadPool]: On list_dev_raw_data: Close
+[0m20:57:21.786917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c5f9c0e5-a6b6-45b5-8ca0-d3caada1fbd5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae73aed700>]}
+[0m20:57:21.788595 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:57:21.789467 [info ] [MainThread]: 
+[0m20:57:21.795851 [debug] [Thread-1  ]: Began running node snapshot.build_mau.snapshot_session_summary
+[0m20:57:21.797248 [info ] [Thread-1  ]: 1 of 1 START snapshot snapshots.snapshot_session_summary ....................... [RUN]
+[0m20:57:21.797928 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_dev_raw_data, now snapshot.build_mau.snapshot_session_summary)
+[0m20:57:21.798366 [debug] [Thread-1  ]: Began compiling node snapshot.build_mau.snapshot_session_summary
+[0m20:57:21.817922 [debug] [Thread-1  ]: Began executing node snapshot.build_mau.snapshot_session_summary
+[0m20:57:21.893721 [debug] [Thread-1  ]: Using snowflake connection "snapshot.build_mau.snapshot_session_summary"
+[0m20:57:21.894200 [debug] [Thread-1  ]: On snapshot.build_mau.snapshot_session_summary: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "build_mau", "target_name": "dev", "node_id": "snapshot.build_mau.snapshot_session_summary"} */
+/* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "build_mau", "target_name": "dev", "node_id": "snapshot.build_mau.snapshot_session_summary"} */
+select * from (
+        
+    
+
+    select *,
+        md5(coalesce(cast(session_id as varchar ), '')
+         || '|' || coalesce(cast(end_time as varchar ), '')
+        ) as dbt_scd_id,
+        end_time as dbt_updated_at,
+        end_time as dbt_valid_from,
+        nullif(end_time, end_time) as dbt_valid_to
+    from (
+        
+
+
+
+select * from dev.raw_data.session_summary
+
+    ) sbq
+
+
+
+    ) as __dbt_sbq
+    where false
+    limit 0
+[0m20:57:21.894544 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:57:22.648913 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.754 seconds
+[0m20:57:22.662628 [debug] [Thread-1  ]: Using snowflake connection "snapshot.build_mau.snapshot_session_summary"
+[0m20:57:22.663762 [debug] [Thread-1  ]: On snapshot.build_mau.snapshot_session_summary: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "build_mau", "target_name": "dev", "node_id": "snapshot.build_mau.snapshot_session_summary"} */
+/* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "build_mau", "target_name": "dev", "node_id": "snapshot.build_mau.snapshot_session_summary"} */
+select * from (
+        select to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_snapshot_time
+    ) as __dbt_sbq
+    where false
+    limit 0
+[0m20:57:22.761838 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.097 seconds
+[0m20:57:22.765406 [debug] [Thread-1  ]: Writing runtime sql for node "snapshot.build_mau.snapshot_session_summary"
+[0m20:57:22.769077 [debug] [Thread-1  ]: Using snowflake connection "snapshot.build_mau.snapshot_session_summary"
+[0m20:57:22.770025 [debug] [Thread-1  ]: On snapshot.build_mau.snapshot_session_summary: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "build_mau", "target_name": "dev", "node_id": "snapshot.build_mau.snapshot_session_summary"} */
+create or replace transient table dev.snapshots.snapshot_session_summary
+         as
+        (
+    
+
+    select *,
+        md5(coalesce(cast(session_id as varchar ), '')
+         || '|' || coalesce(cast(end_time as varchar ), '')
+        ) as dbt_scd_id,
+        end_time as dbt_updated_at,
+        end_time as dbt_valid_from,
+        nullif(end_time, end_time) as dbt_valid_to
+    from (
+        
+
+
+
+select * from dev.raw_data.session_summary
+
+    ) sbq
+
+
+
+        );
+[0m20:57:23.724385 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.953 seconds
+[0m20:57:23.771059 [debug] [Thread-1  ]: On snapshot.build_mau.snapshot_session_summary: Close
+[0m20:57:23.885520 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c5f9c0e5-a6b6-45b5-8ca0-d3caada1fbd5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae61132d90>]}
+[0m20:57:23.887095 [info ] [Thread-1  ]: 1 of 1 OK snapshotted snapshots.snapshot_session_summary ....................... [[32mSUCCESS 1[0m in 2.09s]
+[0m20:57:23.887867 [debug] [Thread-1  ]: Finished running node snapshot.build_mau.snapshot_session_summary
+[0m20:57:23.890348 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:57:23.890961 [debug] [MainThread]: Connection 'snapshot.build_mau.snapshot_session_summary' was properly closed.
+[0m20:57:23.891538 [info ] [MainThread]: 
+[0m20:57:23.892205 [info ] [MainThread]: Finished running 1 snapshot in 0 hours 0 minutes and 4.86 seconds (4.86s).
+[0m20:57:23.893541 [debug] [MainThread]: Command end result
+[0m20:57:23.998654 [info ] [MainThread]: 
+[0m20:57:23.999088 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:57:23.999361 [info ] [MainThread]: 
+[0m20:57:23.999772 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m20:57:24.003173 [debug] [MainThread]: Resource report: {"command_name": "snapshot", "command_success": true, "command_wall_clock_time": 6.080578, "process_user_time": 3.083371, "process_kernel_time": 0.345531, "process_mem_max_rss": "182906880", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:57:24.003721 [debug] [MainThread]: Command `dbt snapshot` succeeded at 20:57:24.003635 after 6.08 seconds
+[0m20:57:24.004082 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae6044c520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae717b5cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae737e3af0>]}
+[0m20:57:24.004399 [debug] [MainThread]: Flushing usage events
+[0m20:57:49.141704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa7f0f5c4f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa7f2ea3fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa7f2eddfd0>]}
+
+
+============================== 20:57:49.144745 | 08c788d8-ec62-45c1-a47c-33b529e8504b ==============================
+[0m20:57:49.144745 [info ] [MainThread]: Running with dbt=1.8.7
+[0m20:57:49.145364 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'log_format': 'default', 'fail_fast': 'False', 'printer_width': '80', 'target_path': 'None', 'profiles_dir': '/Users/himajasree/.dbt', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'empty': 'None', 'debug': 'False', 'static_parser': 'True', 'quiet': 'False', 'invocation_command': 'dbt test', 'use_colors': 'True', 'write_json': 'True', 'log_path': '/Users/himajasree/Desktop/sjsu-data226/week10/build_mau/logs', 'no_print': 'None', 'version_check': 'True'}
+[0m20:57:49.717394 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '08c788d8-ec62-45c1-a47c-33b529e8504b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa7f2f54ca0>]}
+[0m20:57:49.754862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '08c788d8-ec62-45c1-a47c-33b529e8504b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa7f3ed61f0>]}
+[0m20:57:49.755704 [info ] [MainThread]: Registered adapter: snowflake=1.8.4
+[0m20:57:49.779590 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m20:57:49.919283 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:57:49.919683 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:57:49.970754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '08c788d8-ec62-45c1-a47c-33b529e8504b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa7e116c790>]}
+[0m20:57:50.086354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '08c788d8-ec62-45c1-a47c-33b529e8504b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa7f4183b20>]}
+[0m20:57:50.086844 [info ] [MainThread]: Found 3 models, 1 snapshot, 2 data tests, 2 sources, 454 macros
+[0m20:57:50.087199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '08c788d8-ec62-45c1-a47c-33b529e8504b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa7d0821fd0>]}
+[0m20:57:50.088415 [info ] [MainThread]: 
+[0m20:57:50.088979 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m20:57:50.089865 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dev_snapshots'
+[0m20:57:50.103504 [debug] [ThreadPool]: Using snowflake connection "list_dev_snapshots"
+[0m20:57:50.103871 [debug] [ThreadPool]: On list_dev_snapshots: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "build_mau", "target_name": "dev", "connection_name": "list_dev_snapshots"} */
+show objects in dev.snapshots limit 10000
+[0m20:57:50.104131 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:57:50.774724 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.669 seconds
+[0m20:57:50.780653 [debug] [ThreadPool]: On list_dev_snapshots: Close
+[0m20:57:50.938452 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev_snapshots, now list_dev_raw_data)
+[0m20:57:50.943220 [debug] [ThreadPool]: Using snowflake connection "list_dev_raw_data"
+[0m20:57:50.943738 [debug] [ThreadPool]: On list_dev_raw_data: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "build_mau", "target_name": "dev", "connection_name": "list_dev_raw_data"} */
+show objects in dev.raw_data limit 10000
+[0m20:57:50.944250 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:57:51.474957 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.530 seconds
+[0m20:57:51.480791 [debug] [ThreadPool]: On list_dev_raw_data: Close
+[0m20:57:51.641422 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '08c788d8-ec62-45c1-a47c-33b529e8504b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa7f4194670>]}
+[0m20:57:51.643266 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:57:51.644583 [info ] [MainThread]: 
+[0m20:57:51.649486 [debug] [Thread-1  ]: Began running node test.build_mau.not_null_session_summary_session_id.b62ea814dc
+[0m20:57:51.650651 [info ] [Thread-1  ]: 1 of 2 START test not_null_session_summary_session_id .......................... [RUN]
+[0m20:57:51.651761 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_dev_raw_data, now test.build_mau.not_null_session_summary_session_id.b62ea814dc)
+[0m20:57:51.652705 [debug] [Thread-1  ]: Began compiling node test.build_mau.not_null_session_summary_session_id.b62ea814dc
+[0m20:57:51.686132 [debug] [Thread-1  ]: Writing injected SQL for node "test.build_mau.not_null_session_summary_session_id.b62ea814dc"
+[0m20:57:51.687407 [debug] [Thread-1  ]: Began executing node test.build_mau.not_null_session_summary_session_id.b62ea814dc
+[0m20:57:51.766708 [debug] [Thread-1  ]: Writing runtime sql for node "test.build_mau.not_null_session_summary_session_id.b62ea814dc"
+[0m20:57:51.767783 [debug] [Thread-1  ]: Using snowflake connection "test.build_mau.not_null_session_summary_session_id.b62ea814dc"
+[0m20:57:51.768128 [debug] [Thread-1  ]: On test.build_mau.not_null_session_summary_session_id.b62ea814dc: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "build_mau", "target_name": "dev", "node_id": "test.build_mau.not_null_session_summary_session_id.b62ea814dc"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select session_id
+from dev.raw_data.session_summary
+where session_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m20:57:51.768432 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:57:52.346666 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.578 seconds
+[0m20:57:52.367499 [debug] [Thread-1  ]: On test.build_mau.not_null_session_summary_session_id.b62ea814dc: Close
+[0m20:57:52.504004 [info ] [Thread-1  ]: 1 of 2 PASS not_null_session_summary_session_id ................................ [[32mPASS[0m in 0.85s]
+[0m20:57:52.505687 [debug] [Thread-1  ]: Finished running node test.build_mau.not_null_session_summary_session_id.b62ea814dc
+[0m20:57:52.506281 [debug] [Thread-1  ]: Began running node test.build_mau.unique_session_summary_session_id.54e9d6798b
+[0m20:57:52.507461 [info ] [Thread-1  ]: 2 of 2 START test unique_session_summary_session_id ............................ [RUN]
+[0m20:57:52.508676 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.build_mau.not_null_session_summary_session_id.b62ea814dc, now test.build_mau.unique_session_summary_session_id.54e9d6798b)
+[0m20:57:52.509621 [debug] [Thread-1  ]: Began compiling node test.build_mau.unique_session_summary_session_id.54e9d6798b
+[0m20:57:52.522301 [debug] [Thread-1  ]: Writing injected SQL for node "test.build_mau.unique_session_summary_session_id.54e9d6798b"
+[0m20:57:52.523748 [debug] [Thread-1  ]: Began executing node test.build_mau.unique_session_summary_session_id.54e9d6798b
+[0m20:57:52.529156 [debug] [Thread-1  ]: Writing runtime sql for node "test.build_mau.unique_session_summary_session_id.54e9d6798b"
+[0m20:57:52.531125 [debug] [Thread-1  ]: Using snowflake connection "test.build_mau.unique_session_summary_session_id.54e9d6798b"
+[0m20:57:52.531858 [debug] [Thread-1  ]: On test.build_mau.unique_session_summary_session_id.54e9d6798b: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "build_mau", "target_name": "dev", "node_id": "test.build_mau.unique_session_summary_session_id.54e9d6798b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    session_id as unique_field,
+    count(*) as n_records
+
+from dev.raw_data.session_summary
+where session_id is not null
+group by session_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m20:57:52.532516 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m20:57:53.052751 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.520 seconds
+[0m20:57:53.059382 [debug] [Thread-1  ]: On test.build_mau.unique_session_summary_session_id.54e9d6798b: Close
+[0m20:57:53.222237 [info ] [Thread-1  ]: 2 of 2 PASS unique_session_summary_session_id .................................. [[32mPASS[0m in 0.71s]
+[0m20:57:53.224727 [debug] [Thread-1  ]: Finished running node test.build_mau.unique_session_summary_session_id.54e9d6798b
+[0m20:57:53.228333 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:57:53.228995 [debug] [MainThread]: Connection 'test.build_mau.unique_session_summary_session_id.54e9d6798b' was properly closed.
+[0m20:57:53.229655 [info ] [MainThread]: 
+[0m20:57:53.230337 [info ] [MainThread]: Finished running 2 data tests in 0 hours 0 minutes and 3.14 seconds (3.14s).
+[0m20:57:53.232371 [debug] [MainThread]: Command end result
+[0m20:57:53.289746 [info ] [MainThread]: 
+[0m20:57:53.290369 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:57:53.290790 [info ] [MainThread]: 
+[0m20:57:53.291251 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m20:57:53.295048 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 4.210153, "process_user_time": 2.912542, "process_kernel_time": 0.329144, "process_mem_max_rss": "191164416", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m20:57:53.295781 [debug] [MainThread]: Command `dbt test` succeeded at 20:57:53.295664 after 4.21 seconds
+[0m20:57:53.296245 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa7f0f5c4f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa7f4183b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa7f17f1100>]}
+[0m20:57:53.296679 [debug] [MainThread]: Flushing usage events
